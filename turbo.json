@@ -1,0 +1,24 @@
+{
+  "pipeline": {
+    "dev": {
+      "dependsOn": ["^dev"],
+      "cache": false
+    },
+    "lint": {
+      "outputs": []
+    },
+    "test": {
+      "outputs": ["coverage/**"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "storybook-static/**"]
+    },
+    "docker-build": {
+      "outputs": []
+    },
+    "docker-build-ci": {
+      "outputs": []
+    }
+  }
+}
