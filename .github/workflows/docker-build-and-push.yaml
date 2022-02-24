@@ -1,0 +1,81 @@
+name: Docker build and push
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+    paths:
+      - apps/**
+      - packages/**
+      - configs/**
+      - .github/workflows/docker-build-and-push.yaml
+
+jobs:
+  build-and-push:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    env:
+      DOCKER_BUILDKIT: 1
+      CACHE_REGISTRY: localhost:5000
+      NAMESPACE: ring
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 17.x
+          cache: yarn
+
+      - name: Setup Turbo cache
+        id: turbo-cache
+        uses: actions/cache@v2
+        with:
+          path: node_modules/.cache/turbo
+          key: turbo-${{ github.job }}
+
+      - name: Setup Docker cache
+        id: docker-cache
+        uses: actions/cache@v2
+        with:
+          path: /tmp/docker-cache
+          key: docker-${{ hashFiles('**/Dockerfile') }}
+
+      - name: Is Turbo cached?
+        if: steps.turbo-cache.outputs.cache-hit == 'true'
+        run: echo "Turbo cached"
+
+      - name: Is Docker cached?
+        if: steps.docker-cache.outputs.cache-hit == 'true'
+        run: echo "Docker cached"
+
+      - name: Add global yarn dependencies
+        run: yarn global add turbo @b12k/env-cmd
+
+      - name: Setup docker cache registry
+        run: docker run -d -p 5000:5000 --restart=always --name registry -v /tmp/docker-cache:/var/lib/registry registry:2 && npx wait-on tcp:5000
+
+      - name: Build images
+        run: yarn docker-build-ci
+
+      - name: List images to tag
+        id: images
+        run: echo ::set-output name=no-new::$(docker images --format "{{.Repository}}" | grep $NAMESPACE || echo true)
+
+      - name: Tag cached images
+        if: steps.images.outputs.no-new != 'true'
+        run: docker images --format "{{.Repository}}" | grep $NAMESPACE | xargs -I "{}" docker tag "{}" $CACHE_REGISTRY/"{}"
+
+      - name: List images to push
+        if: steps.images.outputs.no-new != 'true'
+        run: docker images --format "{{.Repository}}" | grep $CACHE_REGISTRY/$NAMESPACE || echo false
+
+      - name: Push images to cache registry
+        if: steps.images.outputs.no-new != 'true' && steps.cache.outputs.cache-hit != 'true'
+        run: docker images --format "{{.Repository}}" | grep $CACHE_REGISTRY/$NAMESPACE | xargs -I "{}" docker push "{}"
