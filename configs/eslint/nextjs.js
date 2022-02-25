@@ -1,6 +1,4 @@
-const react = require("./react");
-
-base.overrides[0].extends.push("plugin:testing-library/react");
+const react = require('./react');
 
 module.exports = {
   ...react,
@@ -10,7 +8,7 @@ module.exports = {
   },
   extends: [
     // https://nextjs.org/docs/basic-features/eslint
-    "next/core-web-vitals",
+    'next/core-web-vitals',
 
     ...react.extends,
   ],
@@ -18,6 +16,6 @@ module.exports = {
     ...react.rules,
 
     // NextJS rules
-    "@next/next/no-img-element": "off",
+    '@next/next/no-img-element': 'off',
   },
 };

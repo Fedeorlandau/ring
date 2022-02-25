@@ -2,38 +2,19 @@ module.exports = {
   env: {
     node: true,
   },
-  ignorePatterns: [
-    "**/*.js",
-    "**/*.json",
-    "dist",
-    "next",
-    ".turbo",
-    "coverage",
-    "node_modules",
-  ],
-  plugins: [
-    "@typescript-eslint",
-    "import",
-    "jest",
-    "jest-dom",
-    "simple-import-sort",
-    "testing-library",
-    "unused-imports",
-  ],
+  ignorePatterns: ['**/*.js', '**/*.json', 'dist', 'next', '.turbo', 'coverage', 'node_modules'],
+  plugins: ['@typescript-eslint', 'import', 'jest', 'jest-dom', 'simple-import-sort', 'unused-imports'],
   extends: [
-    "eslint:recommended",
+    'eslint:recommended',
 
     // https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
 
     // https://www.npmjs.com/package/eslint-plugin-import
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-
-    // https://github.com/storybookjs/eslint-plugin-storybook
-    "plugin:storybook/recommended",
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
 
     /**
      * Make sure to put prettier last, so it gets the chance to override other
@@ -41,63 +22,57 @@ module.exports = {
      *
      * @see https://github.com/prettier/eslint-config-prettier
      */
-    "prettier",
+    'prettier',
   ],
   settings: {
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"],
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
-    "import/resolver": {
+    'import/resolver': {
       typescript: {
         alwaysTryTypes: true,
-        project: ["apps/*/tsconfig.json"],
+        project: ['apps/*/tsconfig.json'],
       },
     },
   },
   rules: {
     // ESLint rules
-    "func-style": ["error", "declaration"],
-    "no-console": "warn",
-    "no-use-before-define": "off",
+    'func-style': ['error', 'declaration'],
+    'no-console': 'warn',
+    'no-use-before-define': 'off',
 
     // https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
-    "@typescript-eslint/array-type": ["error", { default: "generic" }],
-    "@typescript-eslint/no-unsafe-call": "off",
-    "@typescript-eslint/no-unsafe-member-access": "off",
-    "@typescript-eslint/no-unsafe-assignment": "off",
+    '@typescript-eslint/array-type': ['error', { default: 'generic' }],
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
 
     // https://www.npmjs.com/package/eslint-plugin-import
-    "import/no-default-export": "error",
+    'import/no-default-export': 'error',
 
     // https://www.npmjs.com/package/eslint-plugin-simple-import-sort
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
 
     // https://www.npmjs.com/package/eslint-plugin-unused-imports
-    "unused-imports/no-unused-imports": "error",
+    'unused-imports/no-unused-imports': 'error',
   },
   overrides: [
     {
       env: {
         jest: true,
       },
-      files: [
-        "**/__tests__/**/*.[jt]s?(x)",
-        "**/?(*.)+(spec|test|e2e-spec).[jt]s?(x)",
-      ],
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test|e2e-spec).[jt]s?(x)'],
       extends: [
         // https://www.npmjs.com/package/eslint-plugin-jest
-        "plugin:jest/recommended",
-        "plugin:jest/style",
+        'plugin:jest/recommended',
+        'plugin:jest/style',
 
         // https://github.com/testing-library/eslint-plugin-jest-dom
-        "plugin:jest-dom/recommended",
+        'plugin:jest-dom/recommended',
       ],
       rules: {
-        "import/no-extraneous-dependencies": [
-          "off",
-          { devDependencies: ["**/?(*.)+(spec|test|e2e-spec).[jt]s?(x)"] },
-        ],
+        'import/no-extraneous-dependencies': ['off', { devDependencies: ['**/?(*.)+(spec|test|e2e-spec).[jt]s?(x)'] }],
       },
     },
   ],
