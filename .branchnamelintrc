@@ -9,6 +9,6 @@
       "test"
     ],
     "description": ["[a-z0-9-]+"],
-    "issue": ["udp-[0-9]+"]
+    "issue": ["ril-[0-9]+"]
   }
 }
