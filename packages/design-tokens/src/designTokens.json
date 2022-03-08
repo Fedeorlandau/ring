@@ -769,158 +769,156 @@
           "type": "typography"
         }
       },
-      "text": {
-        "bold": {
-          "xs": {
-            "value": {
-              "fontFamily": "$fontFamilies.sans",
-              "fontWeight": "{fontWeights.bold}",
-              "lineHeight": "$lineHeights.2",
-              "fontSize": "$fontSize.0",
-              "letterSpacing": "$letterSpacing.1",
-              "paragraphSpacing": "$paragraphSpacing.0",
-              "textCase": "$textCase.none",
-              "textDecoration": "$textDecoration.none"
-            },
-            "type": "typography"
+      "textBold": {
+        "xs": {
+          "value": {
+            "fontFamily": "$fontFamilies.sans",
+            "fontWeight": "{fontWeights.bold}",
+            "lineHeight": "$lineHeights.2",
+            "fontSize": "$fontSize.0",
+            "letterSpacing": "$letterSpacing.1",
+            "paragraphSpacing": "$paragraphSpacing.0",
+            "textCase": "$textCase.none",
+            "textDecoration": "$textDecoration.none"
           },
-          "sm": {
-            "value": {
-              "fontFamily": "$fontFamilies.sans",
-              "fontWeight": "{fontWeights.bold}",
-              "lineHeight": "$lineHeights.2",
-              "fontSize": "$fontSize.1",
-              "letterSpacing": "$letterSpacing.0",
-              "paragraphSpacing": "$paragraphSpacing.0",
-              "textCase": "$textCase.none",
-              "textDecoration": "$textDecoration.none"
-            },
-            "type": "typography"
-          },
-          "md": {
-            "value": {
-              "fontFamily": "$fontFamilies.sans",
-              "fontWeight": "{fontWeights.bold}",
-              "lineHeight": "$lineHeights.2",
-              "fontSize": "$fontSize.2",
-              "letterSpacing": "$letterSpacing.0",
-              "paragraphSpacing": "$paragraphSpacing.0",
-              "textCase": "$textCase.none",
-              "textDecoration": "$textDecoration.none"
-            },
-            "type": "typography"
-          },
-          "lg": {
-            "value": {
-              "fontFamily": "$fontFamilies.sans",
-              "fontWeight": "{fontWeights.bold}",
-              "lineHeight": "$lineHeights.2",
-              "fontSize": "$fontSize.4",
-              "letterSpacing": "0",
-              "paragraphSpacing": "0",
-              "textCase": "none",
-              "textDecoration": "none"
-            },
-            "type": "typography"
-          },
-          "xl": {
-            "value": {
-              "fontFamily": "$fontFamilies.sans",
-              "fontWeight": "{fontWeights.bold}",
-              "lineHeight": "$lineHeights.2",
-              "fontSize": "$fontSize.5",
-              "letterSpacing": "0",
-              "paragraphSpacing": "0",
-              "textCase": "none",
-              "textDecoration": "none"
-            },
-            "type": "typography"
-          }
+          "type": "typography"
         },
-        "regular": {
-          "xs": {
-            "value": {
-              "fontFamily": "$fontFamilies.Sans",
-              "fontWeight": "{fontWeights.regular}",
-              "lineHeight": "$lineHeights.2",
-              "fontSize": "$fontSize.0",
-              "letterSpacing": "0",
-              "paragraphSpacing": "$paragraphSpacing.0",
-              "textCase": "$textCase.none",
-              "textDecoration": "$textDecoration.none"
-            },
-            "type": "typography",
-            "description": "also labeltext"
+        "sm": {
+          "value": {
+            "fontFamily": "$fontFamilies.sans",
+            "fontWeight": "{fontWeights.bold}",
+            "lineHeight": "$lineHeights.2",
+            "fontSize": "$fontSize.1",
+            "letterSpacing": "$letterSpacing.0",
+            "paragraphSpacing": "$paragraphSpacing.0",
+            "textCase": "$textCase.none",
+            "textDecoration": "$textDecoration.none"
           },
-          "sm": {
-            "value": {
-              "fontFamily": "$fontFamilies.Sans",
-              "fontWeight": "{fontWeights.regular}",
-              "lineHeight": "$lineHeights.2",
-              "fontSize": "$fontSize.1",
-              "letterSpacing": "0",
-              "paragraphSpacing": "$paragraphSpacing.0",
-              "textCase": "$textCase.none",
-              "textDecoration": "$textDecoration.none"
-            },
-            "type": "typography"
-          },
-          "md": {
-            "value": {
-              "fontFamily": "$fontFamilies.Sans",
-              "fontWeight": "{fontWeights.regular}",
-              "lineHeight": "$lineHeights.2",
-              "fontSize": "$fontSize.2",
-              "letterSpacing": "0",
-              "paragraphSpacing": "$paragraphSpacing.0",
-              "textCase": "$textCase.none",
-              "textDecoration": "$textDecoration.none"
-            },
-            "type": "typography",
-            "description": "= base = 1rem"
-          },
-          "lg": {
-            "value": {
-              "fontFamily": "$fontFamilies.Sans",
-              "fontWeight": "{fontWeights.regular}",
-              "lineHeight": "$lineHeights.2",
-              "fontSize": "$fontSize.4",
-              "letterSpacing": "0",
-              "paragraphSpacing": "$paragraphSpacing.0",
-              "textCase": "$textCase.none",
-              "textDecoration": "$textDecoration.none"
-            },
-            "type": "typography",
-            "description": "also buttontext"
-          },
-          "xl": {
-            "value": {
-              "fontFamily": "$fontFamilies.Sans",
-              "fontWeight": "{fontWeights.regular}",
-              "lineHeight": "$lineHeights.2",
-              "fontSize": "$fontSize.5",
-              "letterSpacing": "$letterSpacing.0",
-              "paragraphSpacing": "$paragraphSpacing.0",
-              "textCase": "$textCase.none",
-              "textDecoration": "$textDecoration.none"
-            },
-            "type": "typography"
-          }
+          "type": "typography"
         },
+        "md": {
+          "value": {
+            "fontFamily": "$fontFamilies.sans",
+            "fontWeight": "{fontWeights.bold}",
+            "lineHeight": "$lineHeights.2",
+            "fontSize": "$fontSize.2",
+            "letterSpacing": "$letterSpacing.0",
+            "paragraphSpacing": "$paragraphSpacing.0",
+            "textCase": "$textCase.none",
+            "textDecoration": "$textDecoration.none"
+          },
+          "type": "typography"
+        },
+        "lg": {
+          "value": {
+            "fontFamily": "$fontFamilies.sans",
+            "fontWeight": "{fontWeights.bold}",
+            "lineHeight": "$lineHeights.2",
+            "fontSize": "$fontSize.4",
+            "letterSpacing": "0",
+            "paragraphSpacing": "0",
+            "textCase": "none",
+            "textDecoration": "none"
+          },
+          "type": "typography"
+        },
+        "xl": {
+          "value": {
+            "fontFamily": "$fontFamilies.sans",
+            "fontWeight": "{fontWeights.bold}",
+            "lineHeight": "$lineHeights.2",
+            "fontSize": "$fontSize.5",
+            "letterSpacing": "0",
+            "paragraphSpacing": "0",
+            "textCase": "none",
+            "textDecoration": "none"
+          },
+          "type": "typography"
+        }
+      },
+      "textRegular": {
+        "xs": {
+          "value": {
+            "fontFamily": "$fontFamilies.Sans",
+            "fontWeight": "{fontWeights.regular}",
+            "lineHeight": "$lineHeights.2",
+            "fontSize": "$fontSize.0",
+            "letterSpacing": "0",
+            "paragraphSpacing": "$paragraphSpacing.0",
+            "textCase": "$textCase.none",
+            "textDecoration": "$textDecoration.none"
+          },
+          "type": "typography",
+          "description": "also labeltext"
+        },
+        "sm": {
+          "value": {
+            "fontFamily": "$fontFamilies.Sans",
+            "fontWeight": "{fontWeights.regular}",
+            "lineHeight": "$lineHeights.2",
+            "fontSize": "$fontSize.1",
+            "letterSpacing": "0",
+            "paragraphSpacing": "$paragraphSpacing.0",
+            "textCase": "$textCase.none",
+            "textDecoration": "$textDecoration.none"
+          },
+          "type": "typography"
+        },
+        "md": {
+          "value": {
+            "fontFamily": "$fontFamilies.Sans",
+            "fontWeight": "{fontWeights.regular}",
+            "lineHeight": "$lineHeights.2",
+            "fontSize": "$fontSize.2",
+            "letterSpacing": "0",
+            "paragraphSpacing": "$paragraphSpacing.0",
+            "textCase": "$textCase.none",
+            "textDecoration": "$textDecoration.none"
+          },
+          "type": "typography",
+          "description": "= base = 1rem"
+        },
+        "lg": {
+          "value": {
+            "fontFamily": "$fontFamilies.Sans",
+            "fontWeight": "{fontWeights.regular}",
+            "lineHeight": "$lineHeights.2",
+            "fontSize": "$fontSize.4",
+            "letterSpacing": "0",
+            "paragraphSpacing": "$paragraphSpacing.0",
+            "textCase": "$textCase.none",
+            "textDecoration": "$textDecoration.none"
+          },
+          "type": "typography",
+          "description": "also buttontext"
+        },
+        "xl": {
+          "value": {
+            "fontFamily": "$fontFamilies.Sans",
+            "fontWeight": "{fontWeights.regular}",
+            "lineHeight": "$lineHeights.2",
+            "fontSize": "$fontSize.5",
+            "letterSpacing": "$letterSpacing.0",
+            "paragraphSpacing": "$paragraphSpacing.0",
+            "textCase": "$textCase.none",
+            "textDecoration": "$textDecoration.none"
+          },
+          "type": "typography"
+        }
+      },
+      "paragraph": {
         "default": {
-          "p": {
-            "value": {
-              "fontFamily": "$fontFamilies.helvetica",
-              "fontWeight": "$fontWeights.helvetica-1",
-              "lineHeight": "$lineHeights.2",
-              "fontSize": "$fontSize.2",
-              "letterSpacing": "$letterSpacing.0",
-              "paragraphSpacing": "$paragraphSpacing.1",
-              "textCase": "$textCase.none",
-              "textDecoration": "$textDecoration.none"
-            },
-            "type": "typography"
-          }
+          "value": {
+            "fontFamily": "$fontFamilies.helvetica",
+            "fontWeight": "$fontWeights.helvetica-1",
+            "lineHeight": "$lineHeights.2",
+            "fontSize": "$fontSize.2",
+            "letterSpacing": "$letterSpacing.0",
+            "paragraphSpacing": "$paragraphSpacing.1",
+            "textCase": "$textCase.none",
+            "textDecoration": "$textDecoration.none"
+          },
+          "type": "typography"
         }
       },
       "display": {
