@@ -922,7 +922,7 @@
         }
       },
       "heading3": {
-        "sm": {
+        "xs": {
           "value": {
             "fontFamily": "{fontFamilies.serif}",
             "fontWeight": "{fontWeights.regular}",
