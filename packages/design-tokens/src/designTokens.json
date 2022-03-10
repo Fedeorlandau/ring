@@ -88,7 +88,7 @@
         },
         "dark": {
           "type": "color",
-          "value": "{palette.ringBlue.500}"
+          "value": "{palette.ringBlue.700}"
         },
         "light": {
           "type": "color",
@@ -100,7 +100,7 @@
         },
         "outlinedText": {
           "type": "color",
-          "value": "{palette.ringBlue.500}"
+          "value": "{palette.ringBlue.600}"
         }
       },
       "actionPrimary": {
@@ -855,10 +855,10 @@
         },
         "md": {
           "value": {
-            "fontFamily": "{fontFamilies.sans}",
-            "fontWeight": "{fontWeights.light}",
+            "fontFamily": "{fontFamilies.serif}",
+            "fontWeight": "{fontWeights.regular}",
             "lineHeight": "120%",
-            "fontSize": "32",
+            "fontSize": "40",
             "letterSpacing": "1%",
             "paragraphSpacing": "0",
             "textDecoration": "none",
