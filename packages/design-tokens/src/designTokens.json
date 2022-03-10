@@ -104,21 +104,21 @@
         }
       },
       "actionPrimary": {
-        "DEFAULT": {
-          "value": "{colors.primary.DEFAULT}",
+        "main": {
+          "value": "{colors.primary.main}",
           "type": "color"
         },
         "hover": {
-          "value": "{colors.primary.300}",
+          "value": "{colors.primary.dark}",
           "type": "color"
         },
         "focus": {
-          "value": "{colors.primary.500}",
+          "value": "{colors.primary.light}",
           "type": "color"
         },
         "press": {
-          "DEFAULT": {
-            "value": "{colors.primary.700}",
+          "main": {
+            "value": "{colors.primary.main}",
             "type": "color"
           },
           "text": {
@@ -154,21 +154,21 @@
         }
       },
       "secondaryAction": {
-        "DEFAULT": {
-          "value": "{colors.secondary.DEFAULT}",
+        "main": {
+          "value": "{colors.secondary.main}",
           "type": "color"
         },
         "hover": {
-          "value": "{colors.secondary.300}",
+          "value": "{colors.secondary.dark}",
           "type": "color"
         },
         "focus": {
-          "value": "{colors.secondary.500}",
+          "value": "{colors.secondary.light}",
           "type": "color"
         },
         "press": {
-          "DEFAULT": {
-            "value": "{colors.secondary.700}",
+          "main": {
+            "value": "{colors.secondary.main}",
             "type": "color"
           },
           "text": {
