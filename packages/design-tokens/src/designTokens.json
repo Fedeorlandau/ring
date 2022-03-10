@@ -61,15 +61,15 @@
       },
       "info": {
         "contrastText": {
-          "value": "{color.palette.white}",
+          "value": "{palette.white}",
           "type": "color"
         },
         "dark": {
-          "value": "{color.palette.blue.700}",
+          "value": "{palette.blue.700}",
           "type": "color"
         },
         "light": {
-          "value": "{color.palette.blue.50}",
+          "value": "{color.palette.blue.300}",
           "type": "color"
         },
         "main": {
@@ -84,23 +84,23 @@
       "primary": {
         "contrastText": {
           "type": "color",
-          "value": "{}"
+          "value": "{palette.ringblue.500}"
         },
         "dark": {
           "type": "color",
-          "value": "{}"
+          "value": "{palette.ringblue.500}"
         },
         "light": {
           "type": "color",
-          "value": "{}"
+          "value": "{palette.ringblue.500}"
         },
         "main": {
           "type": "color",
-          "value": "{}"
+          "value": "{palette.ringblue.500}"
         },
         "outlinedText": {
           "type": "color",
-          "value": "{}"
+          "value": "{palette.ringblue.500}"
         }
       },
       "actionPrimary": {
@@ -444,7 +444,7 @@
           "type": "other"
         },
         "xl": {
-          "value": "{breakpoints.xl}+({padding.xl}*2)",
+          "value": "{breakpoints.xl}+({grid.padding.xl}*2)",
           "type": "other"
         }
       }
