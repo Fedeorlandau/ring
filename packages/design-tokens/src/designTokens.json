@@ -858,7 +858,7 @@
             "fontFamily": "{fontFamilies.serif}",
             "fontWeight": "{fontWeights.regular}",
             "lineHeight": "120%",
-            "fontSize": "40",
+            "fontSize": "28",
             "letterSpacing": "1%",
             "paragraphSpacing": "0",
             "textDecoration": "none",
