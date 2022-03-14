@@ -1,0 +1,22 @@
+{
+  "name": "@ring/design-tokens",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsdx watch",
+    "build": "shx rm -rf dist && tsdx build --format cjs --tsconfig tsconfig.build.json",
+    "test": "tsdx test --coverage",
+    "lint": "eslint src --fix",
+    "prepare": "tsdx build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@ring/config-eslint": "*",
+    "@ring/config-jest": "*",
+    "@ring/config-typescript": "*",
+    "eslint": "8.10.0",
+    "typescript": "4.6.2"
+  }
+}
