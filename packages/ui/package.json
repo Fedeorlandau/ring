@@ -1,0 +1,68 @@
+{
+  "name": "@ring/ui",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "typings": "src/index.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "resolutions": {
+    "webpack": "^5"
+  },
+  "scripts": {
+    "start": "serve storybook-static",
+    "_dev": "tsdx watch",
+    "_build": "shx rm -rf dist && tsdx build --format cjs --tsconfig tsconfig.build.json",
+    "docker-build": "env-cmd -i docker build {{CONTEXT}} --file={{DOCKERFILE}} --tag={{APP_NAME}} --build-arg=APP_NAME={{APP_NAME}}",
+    "docker-build-ci": "env-cmd -i yarn docker-build --build-arg=BUILDKIT_INLINE_CACHE=1 --cache-from=localhost:5000/{{APP_NAME}}",
+    "test": "tsdx test --passWithNoTests --coverage",
+    "lint": "eslint src",
+    "storybook-docker": "env-cmd -s -x start-storybook -p {{UI_STORYBOOK_PORT}}",
+    "storybook": "start-storybook -p 6006",
+    "storybook-build": "build-storybook"
+  },
+  "dependencies": {
+    "serve": "13.0.2"
+  },
+  "devDependencies": {
+    "@b12k/branch-name-lint": "1.0.3",
+    "@b12k/env-cmd": "10.2.0",
+    "@babel/core": "7.17.5",
+    "@ring/config-docker": "*",
+    "@ring/config-eslint": "*",
+    "@ring/config-jest": "*",
+    "@ring/config-typescript": "*",
+    "@ring/tailwind-preset": "*",
+    "@storybook/addon-essentials": "6.4.19",
+    "@storybook/addon-info": "5.3.21",
+    "@storybook/addon-links": "6.4.19",
+    "@storybook/addon-postcss": "2.0.0",
+    "@storybook/addons": "6.4.19",
+    "@storybook/builder-webpack5": "6.4.19",
+    "@storybook/manager-webpack5": "6.4.19",
+    "@storybook/react": "6.4.19",
+    "@swc/cli": "0.1.55",
+    "@swc/core": "1.2.154",
+    "@types/react": "17.0.40",
+    "@types/react-dom": "17.0.13",
+    "autoprefixer": "10.4.2",
+    "babel-loader": "8.2.3",
+    "eslint": "8.10.0",
+    "eslint-plugin-storybook": "0.5.7",
+    "lint-staged": "12.3.5",
+    "postcss": "8.4.8",
+    "postcss-import": "14.0.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-is": "17.0.2",
+    "shx": "0.3.4",
+    "tailwindcss": "3.0.23",
+    "tsdx": "0.14.1",
+    "tslib": "2.3.1",
+    "turbo": "1.1.6",
+    "typescript": "4.6.2",
+    "webpack": "^5.x.x"
+  }
+}
