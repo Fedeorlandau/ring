@@ -10,8 +10,8 @@
   "packageManager": "yarn@1.22.15",
   "workspaces": [
     "apps/**/*",
-    "packages/**/*",
-    "configs/**/*"
+    "configs/**/*",
+    "packages/**/*"
   ],
   "scripts": {
     "build": "turbo run build --parallel",
