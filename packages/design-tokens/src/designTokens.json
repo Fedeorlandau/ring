@@ -103,7 +103,7 @@
           "value": "{palette.ringBlue.600}"
         }
       },
-      "actionPrimary": {
+      "primaryAction": {
         "main": {
           "value": "{colors.primary.main}",
           "type": "color"
